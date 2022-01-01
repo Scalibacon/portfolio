@@ -6,8 +6,27 @@
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
 }
-
+body {
+  background: var(--background);
+  color: var(--color);
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+:root{
+  --theme-color: rgb(71,76,224);
+  --theme-color-lighter: rgb(107,112,255);
+  --theme-color-darker: rgb(33,36,148);
+  --contrast-color-darker: rgb(148,123,18);
+  --contrast-color-lighter: rgb(224,195,72);
+
+  --background: rgb(20,27,31);
+  --color: rgb(220,227,231);
+
+  --header-height: 80px;
 }
