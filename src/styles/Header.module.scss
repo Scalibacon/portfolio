@@ -1,0 +1,46 @@
+.header{
+  width: 100vw;
+  height: 80px;
+  
+  padding: 0 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--theme-color);
+
+  figure{
+    img{
+      width: 60px;
+    }
+  }
+
+  ul{
+    list-style-type: none;
+
+    display: flex;
+    gap: 1.7rem;
+
+    font-weight: 600;
+    font-size: 1.25rem;
+
+    a:hover{
+      color: var(--contrast-color-lighter);
+      text-decoration: underline;
+    }
+  }
+
+  .settings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover{
+      transform: rotate(90deg);
+      color: var(--contrast-color-lighter)
+    }
+  }
+}
