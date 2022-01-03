@@ -8,8 +8,8 @@
 }
 body {
   width: 100vw;
-  background: var(--background);
-  color: var(--color);
+  background: rgb(var(--background));
+  color: rgb(var(--color));
   overflow-x: hidden;
 }
 a{
@@ -21,14 +21,14 @@ code {
 }
 
 :root{
-  --theme-color: rgb(71,76,224);
-  --theme-color-lighter: rgb(107,112,255);
-  --theme-color-darker: rgb(33,36,148);
-  --contrast-color-darker: rgb(148,123,18);
-  --contrast-color-lighter: rgb(224,195,72);
+  --theme-color: 71,76,224;
+  --theme-color-lighter: 107,112,255;
+  --theme-color-darker: 33,36,148;
+  --contrast-color-darker: 148,123,18;
+  --contrast-color-lighter: 224,195,72;
 
-  --background: rgb(20,27,31);
-  --color: rgb(220,227,231);
+  --background: 20,27,31;
+  --color: 220,227,231;
 
   --header-height: 80px;
 }

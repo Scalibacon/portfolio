@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Postit from "../components/Postit";
 import styles from '../styles/Home.module.scss';
 import Nerdola from '../assets/nerdola.svg';
 import { FaQuoteLeft, FaQuoteRight, FaCode } from 'react-icons/fa';
@@ -97,15 +98,88 @@ const Home = () => {
           </header>
 
           <section className={styles.wall}>
-            <div className={`${styles.postit}`}>
-              <ul>
-                <li>JavaScript ✔</li>
-              </ul>
-            </div>
 
-            <div className={styles.postit}>
+            <Postit 
+              rotation={-7}
+              items={[
+                'JavaScript ✔',
+                'React ✔',
+                'Node.js ✔',
+                'HTML5 ✔',
+                'CSS3 ✔'
+              ]} 
+              draw={0}
+            />
+
+            <Postit
+            rotation={5}
+              items={[
+                'TypeScript 💜',
+                'PostgreSQL ✔',
+                'TypeORM ✔',
+                'Express ✔',
+                'Socket.io ✔'
+              ]}
+            />
+
+            <Postit
+              rotation={-6}
+              items={[
+                'Jest ✔',
+                'SQL Server ✔',
+                'Java ✔',
+                'MongoDB ✔',
+                'SQLite ✔',
+              ]}
+              draw={1}
+            />
+
+            <Postit
+              rotation={4}
+              items={[
+                'Git ✔',
+                'Github ✔',                  
+                'API RESTful ✔',
+                'JWT ✔',
+                'Scrum ✔'
+              ]}
+            />
+
+            <Postit
+              rotation={-3}
+              items={[
+                'NextJS ✔',
+                'JSP ✔',
+                'EJS ✔',
+                'Multer ✔',
+                'SASS ✔',
+                'Insomnia ✔'
+              ]}
+            />
+
+            <Postit
+              title="TO-DO"
+              rotation={-8}
+              items={[
+                'CI/CD',
+                'Docker',                  
+                'AWS',
+                'Lambda Functions'              
+              ]}
+            />
+
+            <Postit
+              title="TO-DO²"
+              rotation={7}
+              items={[
+                'Apache Kafka',
+                'Shell Script',
+                'Elastic Search',
+                'Redis'
+              ]}
+              draw={2}
+            />
               
-            </div>
           </section>
         </section>     
       </main>

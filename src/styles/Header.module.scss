@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
 
-  background: var(--theme-color);
+  background: rgb(var(--theme-color));
 
   figure{
     img{
@@ -29,7 +29,7 @@
     font-size: 1.25rem;
 
     a:hover{
-      color: var(--contrast-color-lighter);
+      color: rgb(var(--contrast-color-lighter));
       text-decoration: underline;
     }
   }
@@ -44,7 +44,7 @@
 
     &:hover{
       transform: rotate(90deg);
-      color: var(--contrast-color-lighter)
+      color: rgb(var(--contrast-color-lighter));
     }
   }
 }
