@@ -132,23 +132,23 @@
     }
   }
 
-  .resume{
-    width: clamp(500px, 75%, 1250px);
-    // background-color: crimson;
+  .sectionTitle{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
 
-    header{
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      gap: 1rem;
-
-      font-size: 1.5rem;
-    }
+    font-size: 1.5rem;
 
     .icon{
       color: var(--contrast-color-lighter);
       font-size: 3rem;
     }
+  }
+
+  .resume{
+    width: clamp(500px, 75%, 1250px);
+    // background-color: crimson;    
 
     p{
       width: 75%;
@@ -172,6 +172,58 @@
 
       b{
         color: var(--theme-color-lighter);
+      }
+    }    
+  }
+
+  .skills{
+    width: clamp(500px, 75%, 1250px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .wall{
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      // background: crimson;
+
+      .postit{
+        width: 15rem;
+        height: 15rem;
+  
+        padding: 2rem 1rem;
+        position: relative;
+        color: var(--theme-color-lighter);
+        background: #ffc;
+  
+        &::before{
+          width: 35px;
+          height: 35px;
+
+          content: '';
+          background: url('../assets/thumbtacks-back.png');
+          background-size: 35px 35px;          
+
+          position: absolute;
+          top: -7px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        ul{
+          list-style-type: none;
+          font-size: 1.3rem;
+
+          li {
+            font-family: 'Permanent Marker', Poppins, cursive;
+          }
+        }
       }
     }    
   }
