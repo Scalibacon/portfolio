@@ -212,8 +212,8 @@
     flex-direction: column;
     gap: 3rem;    
 
-    main{
-      background-color: darkmagenta;
+    & > main{
+      // background-color: darkmagenta;
     }
   }
 }

@@ -1,7 +1,14 @@
 .project{
-  width: 400px;
-  height: 250px;
+  width: 450px;
+  height: 300px;
+  // aspect-ratio: 16/9;
   position: relative;
+
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   color: rgb(var(--theme-color-darker));
   background: white;
@@ -39,5 +46,45 @@
     left: 0;
     transform: skew(55deg) translateX(125%);    
     background: rgba(var(--contrast-color-lighter), 0.75);
+  }
+
+  &:hover main{
+    opacity: 1;
+    transition: all 0.6s ease;
+    transition-delay: 0.2s;
+  }
+
+  main{
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  a{
+    width: 25%;
+    height: 35px;
+    
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+
+    font-size: 1rem;
+    background: rgb(15,15,15);
+    color: rgb(var(--color));
+    cursor: pointer;
+    transition: filter 0.2s;
+
+    &:hover{
+      filter: brightness(110%);
+    }
   }
 }
