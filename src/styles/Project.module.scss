@@ -1,0 +1,43 @@
+.project{
+  width: 400px;
+  height: 250px;
+  position: relative;
+
+  color: rgb(var(--theme-color-darker));
+  background: white;
+  overflow: hidden;
+
+  &:hover::before{
+    // background: rgba(var(--contrast-color-lighter), 0.9);
+    transform: skew(55deg) translateX(-125%);
+  } 
+
+  &:hover::after{
+    // background: rgba(var(--theme-color-lighter), 0.9);
+    transform: skew(55deg) translateX(125%);
+  }
+
+  &::after, &::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    // background: linear-gradient(90deg, rgba(var(--theme-color-lighter), 0.9), rgba(var(--contrast-color-lighter), 0.9));
+    transition: all 0.6s ease;
+  }
+
+  &::after{
+    bottom: 0;
+    right: 0;
+    transform: skew(55deg) translateX(-125%);
+    background: rgba(var(--theme-color-lighter), 0.75);
+  }
+
+  &::before{
+    top: 0;
+    left: 0;
+    transform: skew(55deg) translateX(125%);    
+    background: rgba(var(--contrast-color-lighter), 0.75);
+  }
+}

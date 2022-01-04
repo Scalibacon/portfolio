@@ -1,3 +1,7 @@
+@mixin main-session {
+  width: clamp(500px, 75%, 1250px);
+}
+
 .wrapper{
   width: 100%;
 
@@ -147,7 +151,7 @@
   }
 
   .resume{
-    width: clamp(500px, 75%, 1250px);
+    @include main-session;
     // background-color: crimson;    
 
     p{
@@ -178,7 +182,7 @@
   }
 
   .skills{
-    width: clamp(500px, 75%, 1250px);
+    @include main-session;
 
     display: flex;
     flex-direction: column;
@@ -194,6 +198,22 @@
       gap: 0rem;
 
       // background: crimson;      
-    }    
+    }  
+    h4{
+      opacity: 0.5;
+      font-size: 0.9rem;
+    }  
+  }
+
+  .projects{
+    @include main-session;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;    
+
+    main{
+      background-color: darkmagenta;
+    }
   }
 }

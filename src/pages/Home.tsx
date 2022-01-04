@@ -1,10 +1,12 @@
 import Header from "../components/Header";
 import Postit from "../components/Postit";
+import Project from "../components/Project";
 import styles from '../styles/Home.module.scss';
 import Nerdola from '../assets/nerdola.svg';
 import { FaQuoteLeft, FaQuoteRight, FaCode } from 'react-icons/fa';
-import { FiBookOpen } from 'react-icons/fi';
+import { FiBookOpen, FiMonitor } from 'react-icons/fi';
 import { useState } from "react";
+
 
 type comment = {
   author: string,
@@ -95,9 +97,9 @@ const Home = () => {
         <section className={styles.skills}>
           <header className={styles.sectionTitle}>
             <FaCode className={styles.icon}/><h2>Habilidades</h2>
-          </header>
+          </header>          
 
-          <section className={styles.wall}>
+          <main className={styles.wall}>
 
             <Postit 
               rotation={-7}
@@ -125,7 +127,7 @@ const Home = () => {
             <Postit
               rotation={-6}
               items={[
-                'Jest ✔',
+                'Jest + Supertest ✔',
                 'SQL Server ✔',
                 'Java ✔',
                 'MongoDB ✔',
@@ -155,12 +157,14 @@ const Home = () => {
                 'SASS ✔',
                 'Insomnia ✔'
               ]}
+              draw={3}
             />
 
             <Postit
-              title="TO-DO"
+              title="TO-DO*"
               rotation={-8}
               items={[
+                'React Native',
                 'CI/CD',
                 'Docker',                  
                 'AWS',
@@ -169,19 +173,31 @@ const Home = () => {
             />
 
             <Postit
-              title="TO-DO²"
+              title="TO-DO*"
               rotation={7}
               items={[
+                'Elastic Search',                
                 'Apache Kafka',
                 'Shell Script',
-                'Elastic Search',
-                'Redis'
+                'Redis',
+                'Electron'        
               ]}
               draw={2}
             />
               
-          </section>
-        </section>     
+          </main>
+          <h4>*Ainda não domino, mas tenho interesse em aprender mais</h4>
+        </section> 
+
+        <section className={styles.projects}>
+          <header className={styles.sectionTitle}>
+            <FiMonitor  className={styles.icon}/><h2>Projetos</h2>
+          </header> 
+
+          <main>
+            <Project/>
+          </main>
+        </section>           
       </main>
     </>
   )    

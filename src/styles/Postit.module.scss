@@ -12,6 +12,7 @@
   box-shadow: 2px 3px 10px 0px rgba(0,0,0,1);
   background: #ffc;
 
+  cursor: pointer;
   transform: rotate(var(--deg));
   transition: all 0.2s;
 
@@ -61,6 +62,20 @@
     position: absolute;
     bottom: 0.1rem;
     right: 0.5rem;
+  }
+
+  &.draw3::after{
+    content: '';
+    width: 115px;
+    height: 115px;
+
+    background: url('../assets/graffiti3.png');
+    background-size: 115px 115px;
+    opacity: 0.9;
+
+    position: absolute;
+    top: 2.7rem;
+    right: 0.1rem;
   }
 
   &::before{
