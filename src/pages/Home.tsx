@@ -6,6 +6,7 @@ import Nerdola from '../assets/nerdola.svg';
 import { FaQuoteLeft, FaQuoteRight, FaCode } from 'react-icons/fa';
 import { FiBookOpen, FiMonitor } from 'react-icons/fi';
 import { useState } from "react";
+import ChatBox from "../components/ChatBox";
 
 
 type comment = {
@@ -79,19 +80,19 @@ const Home = () => {
           <header className={styles.sectionTitle}>
             <FiBookOpen className={styles.icon}/><h2>RESUMÃO</h2>
           </header>
+   
+          <main>
+            <ChatBox
+              author="interviewer"
+              text="Olá! Eu sou um texto chumbado e estou aqui para testar esse container."
+            />
 
-          <p>
-            Salve, visitante! Meu nome é Matheus Ferreira do Nascimento e eu sou um programador. Mais precisamente um <strong>desenvolvedor web</strong> que manja um pouco de <b>front-end</b> e de <b>back-end</b>. Sou um grande fã da stack <strong>JavaScript</strong> e por conta disto me desenvolvi um pouco mais em <b> Node.js</b>, <b>ReactJS</b> e <b>TypeScript</b>, mas já tive contato com outras linguagens, como Java e PHP.
-          </p>
-
-          <p>
-            Esse nome <b>"Scali" </b>se originou de um <i>nickname</i> que eu usava em jogos já há bastante tempo, e deste <i> nickname</i> surgiram algumas variações, como Scaliba, Scalibacon e, para a minha versão de desenvolvedor, o <strong>ScaliDev</strong>. Acabei adotando esse apelido pra dar uma diferenciada, já que o meu nome é beeem comum. Só no meu quarto já tem uns 3 com esse nome. Então se você acabar esbarrando com algum Scali por aí, provavelmente sou eu. Ou algum impostor. 🐱‍👤
-          </p>
-
-          <p>
-            Comecei a trabalhar de fato na área da tecnologia no ano de 2021, mas tenho contato com programação desde o ano de 2015, quando ingressei no curso técnico. Atualmente sou formado em <b>Análise e Desenvolvimento de Sistemas</b> pela Fatec Zona Leste e gosto bastante de programar, principalmente aplicações que vão além daquele CRUD padrão. Pode ser um joguinho online, um clone mais simples de alguma aplicação já existente ou qualquer coisa que envolva alguma <b>doideira</b>, desde que tenha algum desafio novo que me ajude a <strong>evoluir</strong>.
-          </p>
-
+            <ChatBox
+              author="scalidev"
+              text="Olá! Eu sou um texto chumbado e estou aqui para testar esse container."
+              isFromLeft={true}
+            />
+          </main> 
         </section>  
 
         <section className={styles.skills}>

@@ -1,0 +1,76 @@
+.chatbox{
+  width: clamp(400px, 100%, 1100px);
+
+  display: flex;
+  gap: 1.3rem;
+
+  // background: crimson;
+
+  &.fromLeft{
+    flex-direction: row-reverse;
+
+    & > p::after{
+      content: '';
+      border-style: solid;
+      border-width: 10px 0px 10px 15px;
+      border-color: transparent transparent transparent rgb(var(--white));
+      position: absolute;
+      top: 30px;
+      right: -15px;
+    }
+    & > p::before{
+      display: none;
+    }
+  }
+
+  & > section{
+    width: 90px;
+    height: 90px;
+
+    padding: 0.3rem;
+    background: cyan;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  & > p {
+    min-width: 300px;
+    max-width: 75%;
+    min-height: 85px;
+
+    position: relative;
+    padding: 1rem 1.7rem;
+    display: flex;
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+
+    color: rgb(var(--black));
+    background: rgb(var(--white));
+    
+    &::before, &::after{      
+      border-style: solid;
+      position: absolute;
+    }
+
+    &::before{
+      content: '';
+      border-width: 10px 15px 10px 0;
+      border-color: transparent rgb(var(--white)) transparent transparent;      
+      top: 30px;
+      left: -15px;
+    }
+
+    strong{
+      color: rgb(var(--contrast-color-lighter));
+    }
+
+    b{
+      color: rgb(var(--theme-color-lighter));
+    }
+  }
+}

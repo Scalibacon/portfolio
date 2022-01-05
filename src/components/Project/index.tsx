@@ -20,7 +20,7 @@ const Project = (props: ProjectProps) => {
 
         <p>{ props.description }</p>
 
-        <a href={props.repository} target="_blank">
+        <a href={props.repository} target="_blank" rel='noreferrer'>
           <FiGithub size={"1.3rem"}/>GitHub
         </a>
       </main>     
