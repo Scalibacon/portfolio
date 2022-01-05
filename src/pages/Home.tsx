@@ -195,7 +195,12 @@ const Home = () => {
           </header> 
 
           <main>
-            <Project/>
+            <Project
+              title="Neverland Heroes"
+              description="Um jogo de cartas estratégico desenvolvido para ser jogado no navegador. É possível montar um baralho e jogar contra uma IA de qualidade duvidosa. Existem mais de 100 cartas diferentes programadas individualmente. Nesse projeto usei Java e SQL Server no backend e HTML, CSS e JavaScript no frontend."
+              repository="https://github.com/Scalibacon/Neverland-Heroes-Java"
+              imgUrl="https://raw.githubusercontent.com/Scalibacon/Neverland-Heroes-Java/master/WebContent/img/board.jpg"
+            />
           </main>
         </section>           
       </main>

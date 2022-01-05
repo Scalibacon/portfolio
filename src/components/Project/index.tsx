@@ -1,15 +1,26 @@
 import styles from '../../styles/Project.module.scss';
 import { FiGithub } from 'react-icons/fi';
 
-const Project = () => {
+type ProjectProps = {
+  title: string,
+  description: string,
+  repository: string,
+  imgUrl: string
+}
+
+const Project = (props: ProjectProps) => {
   return (
-    <article className={styles.project}>      
+    <article className={styles.project}>
+      <figure>
+        <img src={props.imgUrl} alt="project1"/>
+        
+      </figure>      
       <main>
-        <h3>Projeto do Tetheus</h3>
+        <h3>{ props.title }</h3>
 
-        <p>Um projeto teste só pra eu ver como fica nessa bagaça. Neste projeto foram utilizadas as seguintes tecnologias: Node.js no lado do servidor, React juntamente com HTML e CSS no lado do cliente, com o auxílio do fabuloso TypeScript.</p>
+        <p>{ props.description }</p>
 
-        <a>
+        <a href={props.repository} target="_blank">
           <FiGithub size={"1.3rem"}/>GitHub
         </a>
       </main>     

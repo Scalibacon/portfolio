@@ -1,5 +1,5 @@
 @mixin main-session {
-  width: clamp(500px, 75%, 1250px);
+  width: clamp(500px, 75%, 1400px);
 }
 
 .wrapper{
@@ -189,7 +189,8 @@
     gap: 3.5rem;
 
     .wall{
-      width: 100%;
+      width: clamp(500px, 100%, 1250px);
+      margin: 0 auto;
 
       display: flex;
       align-items: center;
@@ -207,13 +208,17 @@
 
   .projects{
     @include main-session;
+    // background-color: crimson;
 
     display: flex;
     flex-direction: column;
     gap: 3rem;    
 
     & > main{
-      // background-color: darkmagenta;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 1.5rem;
     }
   }
 }
