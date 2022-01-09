@@ -233,11 +233,35 @@ const Home = () => {
             </Project>
 
             <Project
+              title="Face2Face"
+              repository="https://github.com/Scalibacon/video-call-js/"
+              imgUrl="https://raw.githubusercontent.com/Scalibacon/video-call-js/master/src/public/assets/face2face_home.png"
+            >
+              Um projeto pessoal simples, feito para realizar chamadas de vídeo com várias pessoas de uma maneira rápida e prática. Nesta aplicação, feita com Node.js, HTML, CSS e JavaScript, é possível criar uma sala de vídeo ou ingressar em uma já existente. É possível fechar a câmera e o microfone também. Para possibilitar a conexão simultânea e em tempo real utilizei o Socket.IO juntamente com o PeerJS.
+            </Project>
+
+            <Project
               title="Web Service OCR + TTS"
               repository="https://github.com/Scalibacon/webservice-ocr-tts/"
               imgUrl="https://raw.githubusercontent.com/Scalibacon/webservice-ocr-tts/master/client/public/assets/client_screenshot.png"
             >
               Um web service, feito como parte do meu TCC, capaz de receber imagens, reconhecer e extrair o texto presente nelas e retornar o texto para o client. Também foi desenvolvido um protóripo de client para consumir o web service e utilizar um TTS para ler o texto extraído para o usuário. Utilizei Node.js e o OCR Tesseract no lado do web service e React para fazer o protótipo de client.
+            </Project>
+
+            <Project
+              title="Back-end de E-Commerce"
+              repository="https://github.com/Scalibacon/node-store-backend/"
+              imgUrl="https://raw.githubusercontent.com/Scalibacon/node-store-backend/master/src/public/assets/nodestore_code.png"
+            >
+              Esse projeto, feito em Node.js, teve como objetivo simular alguns comportamentos de um back-end de e-commerce. Alguns dos recursos desenvolvidos aqui são: o CRUD de produtos, podendo salvar/atualizar imagens; listagem de produtos com diversos filtros simultâneos e opcionais; testes automatizados unitários e de integração com Jest e Supertest; autenticação e autorização com JWT; CRUD de usuários e de administradores.
+            </Project>
+
+            <Project
+              title="Be The Hero"
+              repository="https://github.com/Scalibacon/BeTheHero"
+              imgUrl="https://raw.githubusercontent.com/Scalibacon/BeTheHero/master/frontend/src/assets/bethehero_home.png"
+            >
+              Esse projeto foi realizado em um evento da Rocketseat. Nessa aplicação é possível que ONGs se cadastrem e postem seus casos para que os usuários possam entrar em contato para auxiliar de alguma forma. O back-end funciona como uma APi e foi feito usando Node.js, Knex e SQLite. O front-end foi feito tanto para a web com React como para mobile com React Native.
             </Project>
           </main>
         </section>           
