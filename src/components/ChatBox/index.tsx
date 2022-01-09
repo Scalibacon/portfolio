@@ -3,16 +3,16 @@ import styles from '../../styles/ChatBox.module.scss';
 import imgInterviewer from '../../assets/interviewer.png';
 import imgNerdola from '../../assets/nerdola.svg';
 
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 /*
   deixar as imagens importadas aqui e selecionar baseado no  author
 */
 
 type ChatBoxProps = {
-  text: string,
   author: string,
   isFromLeft?: boolean,
+  children?: ReactNode 
 }
 
 const ChatBox = (props: ChatBoxProps) => {
@@ -34,9 +34,12 @@ const ChatBox = (props: ChatBoxProps) => {
         <img src={chatIcon} alt={props.author}/>
       </section>
 
+    <span>
       <p>
-        { props.text }
+        { props.children }
       </p>
+    </span>
+      
     </div>
   )
 }

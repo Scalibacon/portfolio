@@ -84,14 +84,42 @@ const Home = () => {
           <main>
             <ChatBox
               author="interviewer"
-              text="Olá! Eu sou um texto chumbado e estou aqui para testar esse container."
-            />
+            >
+              Interrompemos este resumo para exibir uma entrevista exclusiva com ScaliDev. Poderia começar nos dizendo o que você faz da vida?
+            </ChatBox>
 
             <ChatBox
               author="scalidev"
-              text="Olá! Eu sou um texto chumbado e estou aqui para testar esse container."
               isFromLeft={true}
-            />
+            >
+              Olá a todos! Eu sou um desenvolvedor de sistemas e manjo um pouco de <b>Front End</b> e de <b>Back End</b>. Gosto bastante de trabalhar com a stack JavaScript, por isso acabei me desenvolvendo um pouco mais em <b>Node.js</b>, <b>React</b> e <b>TypeScript</b>.
+            </ChatBox>
+
+            <ChatBox
+              author="interviewer"
+            >
+              Agora uma curiosidade que muitas pessoas têm é sobre sua experiência nessa área de tecnologia. Poderia nos contar um pouco sobre a sua trajetória?
+            </ChatBox>
+
+            <ChatBox
+              author="scalidev"
+              isFromLeft={true}
+            >
+              Bom, eu comecei nessa área quando caí de paraquedas num curso técnico de informática da ETEC em 2015. Fui pegando gosto pela coisa e acabei fazendo um curso superior em <b>Análise e Desenvolvimento de Sistemas</b> na FATEC Zona Leste. Agora tô trabalhando na área, mas aberto pra novas oportunidades.
+            </ChatBox>
+
+            <ChatBox
+              author="interviewer"
+            >
+              E em quais tipos de projeto você já trabalhou? O que você costuma fazer?
+            </ChatBox>
+
+            <ChatBox
+              author="scalidev"
+              isFromLeft={true}
+            >
+              Já trabalhei em diversos projetos diferentes, indo desde <strong>dashboards e relatórios</strong> até <b>jogos de cartas online</b>. Eu costumo fazer o que precisa ser feito, mas eu gosto bastante de fazer aplicações que vão além daquele CRUD padrão. Pode ser um joguinho, um clone mais simples de uma aplicação ou qualquer coisa que envolva alguma <b>doideira</b>, desde que tenha algum desafio novo que me ajude a <strong>evoluir</strong>.
+            </ChatBox>
           </main> 
         </section>  
 
