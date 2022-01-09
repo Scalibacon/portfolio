@@ -226,10 +226,19 @@ const Home = () => {
           <main>
             <Project
               title="Neverland Heroes"
-              description="Um jogo de cartas estratégico desenvolvido para ser jogado no navegador. É possível montar um baralho e jogar contra uma IA de qualidade duvidosa. Existem mais de 100 cartas diferentes programadas individualmente. Nesse projeto usei Java e SQL Server no backend e HTML, CSS e JavaScript no frontend."
               repository="https://github.com/Scalibacon/Neverland-Heroes-Java"
               imgUrl="https://raw.githubusercontent.com/Scalibacon/Neverland-Heroes-Java/master/WebContent/img/board.jpg"
-            />
+            >
+              Um jogo de cartas estratégico desenvolvido para ser jogado no navegador. É possível montar um baralho e jogar contra uma IA de qualidade duvidosa. Existem mais de 100 cartas diferentes programadas individualmente. Nesse projeto usei Java e SQL Server no backend e HTML, CSS e JavaScript no frontend.
+            </Project>
+
+            <Project
+              title="Web Service OCR + TTS"
+              repository="https://github.com/Scalibacon/webservice-ocr-tts/"
+              imgUrl="https://raw.githubusercontent.com/Scalibacon/webservice-ocr-tts/master/client/public/assets/client_screenshot.png"
+            >
+              Um web service, feito como parte do meu TCC, capaz de receber imagens, reconhecer e extrair o texto presente nelas e retornar o texto para o client. Também foi desenvolvido um protóripo de client para consumir o web service e utilizar um TTS para ler o texto extraído para o usuário. Utilizei Node.js e o OCR Tesseract no lado do web service e React para fazer o protótipo de client.
+            </Project>
           </main>
         </section>           
       </main>

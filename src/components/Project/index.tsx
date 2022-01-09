@@ -1,11 +1,12 @@
 import styles from '../../styles/Project.module.scss';
 import { FiGithub } from 'react-icons/fi';
+import { ReactNode } from 'react';
 
 type ProjectProps = {
   title: string,
-  description: string,
   repository: string,
-  imgUrl: string
+  imgUrl: string,
+  children: ReactNode
 }
 
 const Project = (props: ProjectProps) => {
@@ -18,7 +19,7 @@ const Project = (props: ProjectProps) => {
       <main>
         <h3>{ props.title }</h3>
 
-        <p>{ props.description }</p>
+        <p>{ props.children }</p>
 
         <a href={props.repository} target="_blank" rel='noreferrer'>
           <FiGithub size={"1.3rem"}/>GitHub
