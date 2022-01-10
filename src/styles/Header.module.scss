@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
 
-  background: rgb(var(--theme-color));
+  background: rgba(var(--theme-color), 0.9);
 
   figure{
     img{
@@ -28,9 +28,13 @@
     font-weight: 600;
     font-size: 1.25rem;
 
-    a:hover{
+    a{
+      cursor: pointer;
+    }
+
+    a.active{
       color: rgb(var(--contrast-color-lighter));
-      text-decoration: underline;
+      // text-decoration: underline;
     }
   }
 

@@ -40,7 +40,7 @@ const Home = () => {
     <>
       <Header />
       <main className={styles.wrapper}>
-        <header>
+        <header id="intro">
           <figure className={styles.intro}>
             <img src={Nerdola} alt="Nerdola"/>
             <figcaption>
@@ -55,28 +55,28 @@ const Home = () => {
             <span>Desenvolvedor Full Stack</span>
             <span>Eterno Aprendiz</span>
           </span>
-        </header>
 
-        <section className={styles.testimonial}>
-          <input 
-            type="range" min="0" max="3" 
-            value={activeComment}
-            onChange={e => setActiveComment(parseInt(e.target.value))}
-          />
-          <ul className={styles.comments}>
-            <li>
-              <blockquote>
-                <FaQuoteLeft className={styles.openQuote} />
-                { comments[activeComment].quote }
-                <FaQuoteRight  className={styles.closeQuote}/>
-              </blockquote>
-              <hr/>
-              <cite>{ comments[activeComment].author }</cite>
-            </li>
-          </ul>
-        </section> 
+          <section className={styles.testimonial}>
+            <input 
+              type="range" min="0" max="3" 
+              value={activeComment}
+              onChange={e => setActiveComment(parseInt(e.target.value))}
+            />
+            <ul className={styles.comments}>
+              <li>
+                <blockquote>
+                  <FaQuoteLeft className={styles.openQuote} />
+                  { comments[activeComment].quote }
+                  <FaQuoteRight  className={styles.closeQuote}/>
+                </blockquote>
+                <hr/>
+                <cite>{ comments[activeComment].author }</cite>
+              </li>
+            </ul>
+          </section> 
+        </header>        
 
-        <section className={styles.resume}>
+        <section className={styles.resume} id="resume">
           <header className={styles.sectionTitle}>
             <FiBookOpen className={styles.icon}/><h2>RESUMÃO</h2>
           </header>
@@ -123,7 +123,7 @@ const Home = () => {
           </main> 
         </section>  
 
-        <section className={styles.skills}>
+        <section className={styles.skills} id="skills">
           <header className={styles.sectionTitle}>
             <FaCode className={styles.icon}/><h2>Habilidades</h2>
           </header>          
@@ -161,6 +161,7 @@ const Home = () => {
                 'Java ✔',
                 'MongoDB ✔',
                 'SQLite ✔',
+                'JSON ✔'
               ]}
               draw={1}
             />
@@ -218,7 +219,7 @@ const Home = () => {
           <h4>*Ainda não domino, mas tenho interesse em aprender mais</h4>
         </section> 
 
-        <section className={styles.projects}>
+        <section className={styles.projects} id="projects">
           <header className={styles.sectionTitle}>
             <FiMonitor  className={styles.icon}/><h2>Projetos</h2>
           </header> 

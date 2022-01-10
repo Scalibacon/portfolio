@@ -5,14 +5,15 @@
 .wrapper{
   width: 100%;
 
-  margin-top: calc(var(--header-height) + 2rem);
-
   padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4.5rem;
+
+  & > section, & > header{
+    padding-top: calc(var(--header-height) + 1rem);
+  }
 
   & > header{
     display: flex;
@@ -22,6 +23,7 @@
     .intro{
       display: flex;
       gap: 1rem;
+      margin-top: 1.5rem;
   
       img{
         width: 15rem;
@@ -56,85 +58,87 @@
         }
       }
     }
-  }  
 
-  .testimonial{
-    max-width: 48rem;    
+    .testimonial{
+      max-width: 48rem;    
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    
-    input {
-      appearance: none;
-      width: 150px;
-      height: 0.3rem;
-      border-radius: 5px;  
-      background: rgb(var(--theme-color-lighter));
-      outline: none;
-
-      &::-webkit-slider-thumb {
+      margin-top: 2.5rem;
+      
+      input {
         appearance: none;
-        width: 1.75rem;
-        height: 1.75rem;
-        border-radius: 50%; 
-        border: solid 3px rgb(var(--background));
-        background: rgb(var(--contrast-color-lighter));
-        cursor: pointer;
-      }
-
-      &::-moz-range-thumb {
-        appearance: none;
-        width: 1.75rem;
-        height: 1.75rem;
-        border-radius: 50%;
-        background: rgb(var(--contrast-color-lighter));
-        cursor: pointer;
-      }
-    }
-
-    .comments{
-      list-style-type: none;
-
-      li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-
-        blockquote{
-          width: auto;
-          font-size: 3rem;
-          text-align: center;
-          position: relative;
-
-          .openQuote{
-            margin-left: -4rem;
-            margin-right: 1rem;
-            margin-top: -1rem;
-            opacity: 0.3;
-          }
-          .closeQuote{
-            margin-right: -4rem;
-            margin-left: 1rem;
-            margin-bottom: -1rem;
-            opacity: 0.3;
-          }
+        width: 150px;
+        height: 0.3rem;
+        border-radius: 5px;  
+        background: rgb(var(--theme-color-lighter));
+        outline: none;
+  
+        &::-webkit-slider-thumb {
+          appearance: none;
+          width: 1.75rem;
+          height: 1.75rem;
+          border-radius: 50%; 
+          border: solid 3px rgb(var(--background));
+          background: rgb(var(--contrast-color-lighter));
+          cursor: pointer;
         }
   
-        hr{
-          border: 2px solid rgb(var(--color));
-          opacity: 0.7;
-          width: 80%;
+        &::-moz-range-thumb {
+          appearance: none;
+          width: 1.75rem;
+          height: 1.75rem;
+          border-radius: 50%;
+          background: rgb(var(--contrast-color-lighter));
+          cursor: pointer;
         }
-
-        cite {
-          font-size: 1.7rem;
-        }
-      }     
+      }
+  
+      .comments{
+        list-style-type: none;
+  
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+  
+          blockquote{
+            width: auto;
+            font-size: 3rem;
+            text-align: center;
+            position: relative;
+  
+            .openQuote{
+              margin-left: -4rem;
+              margin-right: 1rem;
+              margin-top: -1rem;
+              opacity: 0.3;
+            }
+            .closeQuote{
+              margin-right: -4rem;
+              margin-left: 1rem;
+              margin-bottom: -1rem;
+              opacity: 0.3;
+            }
+          }
+    
+          hr{
+            border: 2px solid rgb(var(--color));
+            opacity: 0.7;
+            width: 80%;
+          }
+  
+          cite {
+            font-size: 1.7rem;
+          }
+        }     
+      }
     }
-  }
+  }    
 
   .sectionTitle{
     display: flex;
