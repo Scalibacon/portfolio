@@ -1,0 +1,12 @@
+@mixin for-size($device){
+  @if $device == mediumDesktop{
+    @media only screen and (max-width: 1000px){
+      @content;
+    }
+  }
+  @else if $device == smallDesktop{
+    @media only screen and (max-width: 800px){
+      @content;
+    }
+  }
+}
