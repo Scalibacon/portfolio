@@ -238,7 +238,7 @@ const Home = () => {
               repository="https://github.com/Scalibacon/video-call-js/"
               imgUrl="https://raw.githubusercontent.com/Scalibacon/video-call-js/master/src/public/assets/face2face_home.png"
             >
-              Um projeto pessoal simples, feito para realizar chamadas de vídeo com várias pessoas de uma maneira rápida e prática. Nesta aplicação, feita com Node.js, HTML, CSS e JavaScript, é possível criar uma sala de vídeo ou ingressar em uma já existente. É possível fechar a câmera e o microfone também. Para possibilitar a conexão simultânea e em tempo real utilizei o Socket.IO juntamente com o PeerJS.
+              Um projeto pessoal simples, feito para realizar chamadas de vídeo com várias pessoas facilmente. Foi feito com Node.js, HTML, CSS e JavaScript, permitindo criar salas de vídeo ou ingressar em uma já existente. É possível fechar a câmera e o microfone também. Para possibilitar a conexão simultânea e em tempo real utilizei o Socket.IO juntamente com o PeerJS.
             </Project>
 
             <Project
