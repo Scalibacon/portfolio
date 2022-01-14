@@ -3,7 +3,7 @@ import Home from './pages/Home';
 
 const Routes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path='/' element={<Home/>}></Route>
       </Switch>
