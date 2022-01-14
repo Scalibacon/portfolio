@@ -3,13 +3,32 @@ import styles from '../../styles/Header.module.scss';
 import logo from '../../assets/nerdola.svg';
 import { FaCog } from 'react-icons/fa';
 import { FiMenu } from 'react-icons/fi';
-import { SyntheticEvent, useRef } from 'react';
+import { SyntheticEvent, useEffect, useRef } from 'react';
 
 const Header = () => {
   const nav = useRef<HTMLDivElement>(null);
   const blockground = useRef<HTMLDivElement>(null);
+  const hamburger = useRef<HTMLDivElement>(null);
 
-  const toggleMenu = (event: SyntheticEvent) => {
+  useEffect( () => {
+
+    hamburger.current?.addEventListener("click", toggleMenu);
+    hamburger.current?.addEventListener("touchstart", toggleMenu);
+
+    blockground.current?.addEventListener("click", toggleMenu);
+    blockground.current?.addEventListener("touchstart", toggleMenu);
+
+    return () => {
+      hamburger.current?.removeEventListener("touchstart", toggleMenu);
+      hamburger.current?.removeEventListener("click", toggleMenu);
+
+      blockground.current?.removeEventListener("click", toggleMenu);
+      blockground.current?.removeEventListener("touchstart", toggleMenu);
+    }
+
+  }, []);
+
+  function toggleMenu(event: SyntheticEvent | any){
     if(event.type === 'touchstart') event.preventDefault();
 
     nav.current?.classList.toggle(styles.active);
@@ -21,15 +40,14 @@ const Header = () => {
     <div 
       ref={blockground} 
       className={styles.blockground}
-      onClick={ event => toggleMenu(event) }
     >
     </div>
-    <header className={styles.header}>       
-      <FiMenu 
-        size="2.5rem" 
-        className={styles.hamburger}
-        onClick={ event => toggleMenu(event) }
-      />
+    <header className={styles.header}>   
+      <span ref={hamburger} className={styles.hamburger}>
+        <FiMenu        
+          size="2.5rem"
+        />
+      </span>          
 
       <figure>
         <img src={logo} alt="logo"/>
