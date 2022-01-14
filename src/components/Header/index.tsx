@@ -11,19 +11,21 @@ const Header = () => {
   const hamburger = useRef<HTMLDivElement>(null);
 
   useEffect( () => {
+    const localHamburger = hamburger.current;
+    const localBlockground = blockground.current;
 
-    hamburger.current?.addEventListener("click", toggleMenu);
-    hamburger.current?.addEventListener("touchstart", toggleMenu);
+    localHamburger?.addEventListener("click", toggleMenu);
+    localHamburger?.addEventListener("touchstart", toggleMenu);
 
-    blockground.current?.addEventListener("click", toggleMenu);
-    blockground.current?.addEventListener("touchstart", toggleMenu);
+    localBlockground?.addEventListener("click", toggleMenu);
+    localBlockground?.addEventListener("touchstart", toggleMenu);
 
     return () => {
-      hamburger.current?.removeEventListener("touchstart", toggleMenu);
-      hamburger.current?.removeEventListener("click", toggleMenu);
+      localHamburger?.removeEventListener("touchstart", toggleMenu);
+      localHamburger?.removeEventListener("click", toggleMenu);
 
-      blockground.current?.removeEventListener("click", toggleMenu);
-      blockground.current?.removeEventListener("touchstart", toggleMenu);
+      localBlockground?.removeEventListener("click", toggleMenu);
+      localBlockground?.removeEventListener("touchstart", toggleMenu);
     }
 
   }, []);

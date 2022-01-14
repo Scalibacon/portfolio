@@ -52,7 +52,7 @@ const Home = () => {
 
           <span className={styles.roles}>
             <span>Desenvolvedor Web </span> 
-            <span>Desenvolvedor Full Stack</span>
+            <span>Desenvolvedor Full-Stack</span>
             <span>Eterno Aprendiz</span>
           </span>
 
@@ -254,7 +254,7 @@ const Home = () => {
               repository="https://github.com/Scalibacon/node-store-backend/"
               imgUrl="https://raw.githubusercontent.com/Scalibacon/node-store-backend/master/src/public/assets/nodestore_code.png"
             >
-              Esse projeto, feito em Node.js, teve como objetivo simular alguns comportamentos de um back-end de e-commerce. Alguns dos recursos desenvolvidos aqui são: o CRUD de produtos, podendo salvar/atualizar imagens; listagem de produtos com diversos filtros simultâneos e opcionais; testes automatizados unitários e de integração com Jest e Supertest; autenticação e autorização com JWT; CRUD de usuários e de administradores.
+              Esse projeto, feito em Node.js, teve como objetivo simular alguns comportamentos de um back-end de e-commerce. Possui: CRUD de produtos com imagens; listagem de produtos com filtros simultâneos; testes automatizados unitários e de integração; autenticação e autorização com JWT; CRUD de usuários e de administradores.
             </Project>
 
             <Project

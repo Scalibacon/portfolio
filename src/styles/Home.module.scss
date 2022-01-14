@@ -1,3 +1,5 @@
+@import './responsive.scss';
+
 @mixin main-session {
   width: clamp(500px, 75%, 1400px);
 }
@@ -26,7 +28,7 @@
       margin-top: 1.5rem;
   
       img{
-        width: 15rem;
+        width: clamp(9rem, 27vw, 15rem);
       }
   
       figcaption{
@@ -34,20 +36,21 @@
         flex-direction: column;
         justify-content: center;
   
-        font-size: 2.7rem;
+        font-size: clamp(1.7rem, 7vw, 2.7rem);
         font-weight: 800;
   
         mark{
           background: transparent;
           color: rgb(var(--contrast-color-lighter));
-          font-size: 3.5rem;
+          font-size: clamp(2.1rem, 8vw, 3.5rem);
         }
       }
     }
   
     .roles{
       margin-top: 2.4rem;
-      font-size: 1.5rem;
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      display: flex;
   
       span{
         padding: 0 0.8rem;
@@ -99,6 +102,8 @@
   
       .comments{
         list-style-type: none;
+        margin: 0 3rem;
+        // background: deepskyblue;
   
         li {
           display: flex;
@@ -108,18 +113,18 @@
   
           blockquote{
             width: auto;
-            font-size: 3rem;
+            font-size: clamp(1.7rem, 6.5vw, 3rem);            
             text-align: center;
             position: relative;
   
             .openQuote{
-              margin-left: -4rem;
+              margin-left: clamp(-4rem, -7vw, -1rem);
               margin-right: 1rem;
               margin-top: -1rem;
               opacity: 0.3;
             }
             .closeQuote{
-              margin-right: -4rem;
+              margin-right: clamp(-4rem, -7vw, -1rem);
               margin-left: 1rem;
               margin-bottom: -1rem;
               opacity: 0.3;
