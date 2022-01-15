@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Postit from "../components/Postit";
 import Project from "../components/Project";
 import styles from '../styles/Home.module.scss';
-import Nerdola from '../assets/nerdola.svg';
+import Nerdola from '../assets/tetheus.svg';
 import { FaQuoteLeft, FaQuoteRight, FaCode } from 'react-icons/fa';
 import { FiBookOpen, FiMonitor } from 'react-icons/fi';
 import { useState } from "react";
@@ -19,11 +19,11 @@ const Home = () => {
 
   const comments = [
     {
-      author: 'Leo Stronda',
-      quote: 'C@r#lh#, o maluco é brabo!'
+      author: 'Alguém aleatório',
+      quote: 'Uma frase aleatória me "elogiando".'
     },    
     {
-      author: 'Minha Mãe',
+      author: 'Mamãe',
       quote: 'Não fez mais do que sua obrigação, moleque!'
     },
     {

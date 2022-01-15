@@ -1,6 +1,6 @@
 import { Link as ScrollLink } from 'react-scroll';
 import styles from '../../styles/Header.module.scss';
-import logo from '../../assets/nerdola.svg';
+import logo from '../../assets/tetheus.svg';
 import { FaCog } from 'react-icons/fa';
 import { FiMenu } from 'react-icons/fi';
 import { SyntheticEvent, useEffect, useRef } from 'react';

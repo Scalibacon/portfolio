@@ -1,7 +1,7 @@
 import styles from '../../styles/ChatBox.module.scss';
 
 import imgInterviewer from '../../assets/interviewer.png';
-import imgNerdola from '../../assets/nerdola.svg';
+import imgNerdola from '../../assets/tetheus.svg';
 
 import { ReactNode, useEffect, useState } from 'react';
 
@@ -26,7 +26,7 @@ const ChatBox = (props: ChatBoxProps) => {
     if(props.author === 'scalidev'){
       return setChatIcon(imgNerdola);
     }
-  }, []);
+  }, [props.author]);
 
   return (
     <div className={`${styles.chatbox} ${props.isFromLeft ? styles.fromLeft : ''}`}>
