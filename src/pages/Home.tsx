@@ -4,7 +4,7 @@ import Project from "../components/Project";
 import styles from '../styles/Home.module.scss';
 import Nerdola from '../assets/tetheus.svg';
 import { FaQuoteLeft, FaQuoteRight, FaCode } from 'react-icons/fa';
-import { FiBookOpen, FiMonitor } from 'react-icons/fi';
+import { FiBookOpen, FiMonitor, FiPhoneCall } from 'react-icons/fi';
 import { useState } from "react";
 import Resume from "../components/Resume";
 
@@ -184,7 +184,7 @@ const Home = () => {
 
         <section className={styles.projects} id="projects">
           <header className={styles.sectionTitle}>
-            <FiMonitor  className={styles.icon}/><h2>Projetos</h2>
+            <FiMonitor className={styles.icon}/><h2>Projetos</h2>
           </header> 
 
           <main>
@@ -227,6 +227,28 @@ const Home = () => {
             >
               Esse projeto foi realizado em um evento da Rocketseat. Nessa aplicação é possível que ONGs se cadastrem e postem seus casos para que os usuários possam entrar em contato para auxiliar de alguma forma. O back-end funciona como uma APi e foi feito usando Node.js, Knex e SQLite. O front-end foi feito tanto para a web com React como para mobile com React Native.
             </Project>
+          </main>
+        </section>
+
+        <section className={styles.contact} id="contact">
+          <header className={styles.sectionTitle}>
+            <FiPhoneCall className={styles.icon}/><h2>Contato</h2>
+          </header> 
+
+          <p>Pra falar comigo é só chamar em uma das redes sociais ou preencher o formulário abaixo. </p>
+
+          <main>
+            {/* <section className={styles.socials}>
+              <figure></figure>
+            </section> */}
+
+            <form>
+              <input type="text" placeholder="Digite seu nome completo (ou só um pedaço, não vou te obrigar)" className={styles.name}/>
+              <input type="email" placeholder="Digite seu e-mail" className={styles.email}/>
+              <input type="text" placeholder="Digite seu telefone" className={styles.phone}/>                
+              <textarea placeholder="Digite sua mensagem para mim >.<" className={styles.text}></textarea>
+              <button>Enviar e-mail</button>
+            </form>
           </main>
         </section>           
       </main>

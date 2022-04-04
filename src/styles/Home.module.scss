@@ -217,4 +217,100 @@
       gap: 1.5rem;
     }
   }
+
+  .contact{
+    @include main-session;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    input, textarea{
+      outline: none;
+      border: solid 1px rgb(var(--white));
+      border: solid 1px rgb(var(--theme-color-lighter));
+      background-color: transparent;
+      color: rgb(var(--white));
+      padding: 1rem 1.4rem;
+      border-radius: 7px;  
+      font-family: Roboto, sans-serif; 
+      font-size: 1rem; 
+      transition: border 0.15s linear;     
+    }
+
+    input::placeholder, textarea::placeholder{
+      color: rgb(var(--white));
+      opacity: 0.7;
+    }
+
+    input:focus, textarea:focus{
+      border: solid 1px rgb(var(--contrast-color-lighter));
+    }
+
+    .name{
+      grid-area: name;
+    }
+    .email{
+      grid-area: email;
+    }
+    .phone{
+      grid-area: phone;
+    }
+    .text{
+      grid-area: text;
+      height: 175px;
+      resize: none;
+    }
+
+    & > p{
+      font-size: 1.1rem;
+      width: clamp(500px, 65%, 1000px);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    main{
+      width: clamp(500px, 80%, 800px);
+      margin: 0 auto;
+      display: flex;
+      gap: 2rem;
+
+      .socials{
+        min-width: 300px;
+        height: 300px;
+        background-color: rgba(255,255,255,0.2);        
+      }
+
+      form{
+        flex: 1;
+        display: grid;
+        grid-template-areas: 
+          'name name'
+          'email phone'
+          'text text'
+          'button button';
+        gap: 1rem;
+
+        button{
+          margin: 0 auto;
+          grid-area: button;
+          // width: clamp(250px, 30%, 500px);
+
+          outline: none;
+          padding: 1rem 2rem;
+          background: rgb(var(--theme-color-lighter));
+          color: rgb(var(--white));
+          border: solid 2px rgb(var(--theme-color-lighter));
+          font-size: 1.1rem;
+          font-family: 'Poppins';
+          cursor: pointer;
+          transition: 0.1s linear;
+
+          &:hover{
+            filter: brightness(90%);
+            border: solid 2px rgb(var(--contrast-color-lighter));
+          }
+        }
+      }
+    }
+  }
 }

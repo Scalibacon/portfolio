@@ -77,14 +77,17 @@ const Header = () => {
               Projetos
             </ScrollLink>
           </li>
-          <li><a href='#ovo'>Curiosidades</a></li>
+          <li>
+            <ScrollLink activeClass={styles.active} to="contact" spy={true} smooth={true} duration={650}>
+              Contato
+            </ScrollLink>  
+          </li>
         </ul>
       </nav>
 
       <span className={styles.settings}><FaCog size="2rem"/></span>
     </header>
-    </>
-    
+    </>  
   )
 }
 
