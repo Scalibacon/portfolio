@@ -1,7 +1,8 @@
 @import './responsive.scss';
 
 @mixin main-session {
-  width: clamp(500px, 75%, 1400px);
+  width: clamp(500px, 100%, 1500px);
+  padding: 2.5rem;
 }
 
 .wrapper{
@@ -269,18 +270,42 @@
     }
 
     main{
-      width: clamp(500px, 80%, 800px);
+      width: clamp(890px, 100%, 1100px);
       margin: 0 auto;
       display: flex;
       gap: 2rem;
 
+      @include for-size(smallDesktop){
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
       .socials{
         min-width: 300px;
         height: 300px;
-        background-color: rgba(255,255,255,0.2);        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        // background-color: rgba(255,255,255,0.2);   
+        
+        a{
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          transition: filter 0.2s, color 0.2s;
+          cursor: pointer;
+
+          &:hover{
+            filter: brightness(1.1);
+            color: rgb(var(--contrast-color-lighter))
+          }
+        }
       }
 
       form{
+        min-width: 550px;
         flex: 1;
         display: grid;
         grid-template-areas: 

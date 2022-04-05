@@ -3,7 +3,7 @@ import Postit from "../components/Postit";
 import Project from "../components/Project";
 import styles from '../styles/Home.module.scss';
 import Nerdola from '../assets/tetheus.svg';
-import { FaQuoteLeft, FaQuoteRight, FaCode } from 'react-icons/fa';
+import { FaQuoteLeft, FaQuoteRight, FaCode, FaSteam, FaLinkedin, FaFacebookSquare, FaGithub, FaYoutube } from 'react-icons/fa';
 import { FiBookOpen, FiMonitor, FiPhoneCall } from 'react-icons/fi';
 import { useState } from "react";
 import Resume from "../components/Resume";
@@ -238,9 +238,34 @@ const Home = () => {
           <p>Pra falar comigo é só chamar em uma das redes sociais ou preencher o formulário abaixo. </p>
 
           <main>
-            {/* <section className={styles.socials}>
-              <figure></figure>
-            </section> */}
+            <section className={styles.socials}>
+              
+              <a href="https://www.linkedin.com/in/matheus-f-nascimento/" target="_blank">
+                <FaLinkedin size="2rem"/>
+                <figcaption>/matheus-f-nascimento</figcaption>
+              </a>
+
+              <a href="https://web.facebook.com/matheus.ferreiradonascimento/" target="_blank">
+                <FaFacebookSquare size="2rem"/>
+                <figcaption>Matheus Ferreira</figcaption>
+              </a>
+
+              <a href="https://github.com/Scalibacon" target="_blank">
+                <FaGithub size="2rem"/>
+                <figcaption>/scalibacon</figcaption>
+              </a>
+
+              <a href="https://www.youtube.com/channel/UCC5yrRtwpkoCRBoAHkvJsgg" target="_blank">
+                <FaYoutube size="2rem"/>
+                <figcaption>Matheus Ferreira</figcaption>
+              </a>              
+
+              <a href="https://steamcommunity.com/id/scalibacon/" target="_blank">
+                <FaSteam size="2rem"/>
+                <figcaption>/scalibacon</figcaption>
+              </a>
+              
+            </section>
 
             <form>
               <input type="text" placeholder="Digite seu nome completo (ou só um pedaço, não vou te obrigar)" className={styles.name}/>
