@@ -268,10 +268,10 @@ const Home = () => {
             </section>
 
             <form>
-              <input type="text" placeholder="Digite seu nome" className={styles.name}/>
-              <input type="email" placeholder="Digite seu e-mail" className={styles.email}/>
-              <input type="text" placeholder="Digite seu telefone" className={styles.phone}/>                
-              <textarea placeholder="Digite sua mensagem para mim >.<" className={styles.text}></textarea>
+              <input type="text" placeholder="Digite seu nome" required className={styles.name}/>
+              <input type="email" placeholder="Digite seu e-mail" required className={styles.email}/>
+              <input type="text" placeholder="Digite seu telefone" required className={styles.phone}/>                
+              <textarea placeholder="Digite sua mensagem para mim >.<" required className={styles.text}></textarea>
               <button>Enviar e-mail</button>
             </form>
           </main>

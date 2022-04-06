@@ -1,5 +1,7 @@
+@import './responsive.scss';
+
 .resume{
-  width: clamp(600px, 60%, 800px);  
+  width: clamp(600px, 100%, 800px);  
   position: relative;
   // height: 700px;
 
@@ -53,12 +55,16 @@
     }
 
     p {
-      padding: 0 0 0.4rem 0.5rem;
+      padding: 0 0.4rem 0.4rem 0.5rem;
 
       color: rgb(var(--black));
       // font-family: 'Permanent Marker', Poppins, cursive;
       font-weight: 600;
       font-size: 1rem;
+
+      @include for-size(bigPhone){
+        font-size: 1.1rem;
+      }
 
       span{
         position: relative;
@@ -83,7 +89,9 @@
 
     & > figure{
       flex: 4;
-      height: 400px;
+      min-width: 288.45px;
+      // height: 400px;
+      aspect-ratio: 288.45/396;
       margin: auto 0;
     }
 
@@ -103,10 +111,10 @@
   }
 
   .bottomHalf{
-    // height: 250px;
 
     fieldset{
       height: 100%;
+      padding-bottom: 2rem;
     }
   }
 }
