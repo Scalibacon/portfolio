@@ -6,8 +6,7 @@ const Resume = () => {
   return (
     <div className={styles.resume}>
       <section className={styles.upperHalf}>
-        <figure>
-          
+        <figure>          
           <img src ={TetheusBombado} alt="Tetheuzão"/>
           <img src ={TetheusSombra} alt="silhuetheus"/>
         </figure>

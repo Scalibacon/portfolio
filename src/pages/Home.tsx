@@ -65,9 +65,9 @@ const Home = () => {
             <ul className={styles.comments}>
               <li>
                 <blockquote>
-                  <FaQuoteLeft className={styles.openQuote} />
+                  <FaQuoteLeft className={styles.openQuote}/>
                   { comments[activeComment].quote }
-                  <FaQuoteRight  className={styles.closeQuote}/>
+                  <FaQuoteRight className={styles.closeQuote}/>
                 </blockquote>
                 <hr/>
                 <cite>{ comments[activeComment].author }</cite>
@@ -119,7 +119,7 @@ const Home = () => {
             <Postit
               rotation={-6}
               items={[
-                'Jest + Supertest ✔',
+                'Jest ✔',
                 'SQL Server ✔',
                 'Java ✔',
                 'MongoDB ✔',
@@ -240,27 +240,27 @@ const Home = () => {
           <main>
             <section className={styles.socials}>
               
-              <a href="https://www.linkedin.com/in/matheus-f-nascimento/" target="_blank">
+              <a href="https://www.linkedin.com/in/matheus-f-nascimento/" target="_blank" rel="noreferrer">
                 <FaLinkedin size="2rem"/>
                 <figcaption>/matheus-f-nascimento</figcaption>
               </a>
 
-              <a href="https://web.facebook.com/matheus.ferreiradonascimento/" target="_blank">
+              <a href="https://web.facebook.com/matheus.ferreiradonascimento/" target="_blank" rel="noreferrer">
                 <FaFacebookSquare size="2rem"/>
                 <figcaption>Matheus Ferreira</figcaption>
               </a>
 
-              <a href="https://github.com/Scalibacon" target="_blank">
+              <a href="https://github.com/Scalibacon" target="_blank" rel="noreferrer">
                 <FaGithub size="2rem"/>
                 <figcaption>/scalibacon</figcaption>
               </a>
 
-              <a href="https://www.youtube.com/channel/UCC5yrRtwpkoCRBoAHkvJsgg" target="_blank">
+              <a href="https://www.youtube.com/channel/UCC5yrRtwpkoCRBoAHkvJsgg" target="_blank" rel="noreferrer">
                 <FaYoutube size="2rem"/>
                 <figcaption>Matheus Ferreira</figcaption>
               </a>              
 
-              <a href="https://steamcommunity.com/id/scalibacon/" target="_blank">
+              <a href="https://steamcommunity.com/id/scalibacon/" target="_blank" rel="noreferrer">
                 <FaSteam size="2rem"/>
                 <figcaption>/scalibacon</figcaption>
               </a>
@@ -268,7 +268,7 @@ const Home = () => {
             </section>
 
             <form>
-              <input type="text" placeholder="Digite seu nome completo (ou só um pedaço, não vou te obrigar)" className={styles.name}/>
+              <input type="text" placeholder="Digite seu nome" className={styles.name}/>
               <input type="email" placeholder="Digite seu e-mail" className={styles.email}/>
               <input type="text" placeholder="Digite seu telefone" className={styles.phone}/>                
               <textarea placeholder="Digite sua mensagem para mim >.<" className={styles.text}></textarea>

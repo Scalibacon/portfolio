@@ -1,7 +1,9 @@
+@import './responsive.scss';
+
 .project{
   width: 550px;
-  // height: 300px;
-  aspect-ratio: 16/9;
+  height: 309.75px;
+  // aspect-ratio: 16/9;
   position: relative;
 
   display: flex;
@@ -12,6 +14,10 @@
   color: rgb(var(--theme-color-darker));
   background: white;
   overflow: hidden;
+
+  @include for-size(smallDesktop){
+    height: 350px;
+  }
 
   &:hover::before{
     // background: rgba(var(--contrast-color-lighter), 0.9);
@@ -87,13 +93,23 @@
     background: white;
     opacity: 0;
     transition: all 0.4s ease;
+
+    @include for-size(smallDesktop){
+      h3{
+        font-size: 1.4rem;
+      }
+
+      p{
+        font-size: 1.15rem;
+      }
+    }
   }
 
   a{
     width: 25%;
-    height: 35px;
+    height: 40px;
     
-    padding: 0.7rem;
+    padding: 0.7rem ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,6 +123,11 @@
 
     &:hover{
       filter: brightness(110%);
+    }
+
+    @include for-size(bigPhone){
+      font-size: 1.2rem;
+      height: auto;
     }
   }
 }

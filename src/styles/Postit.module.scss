@@ -1,6 +1,6 @@
 .postit{
   width: 15rem;
-  height: 15rem;
+  min-height: 15rem;
 
   padding: 2rem 1rem;
   display: flex;
@@ -14,7 +14,7 @@
 
   cursor: pointer;
   transform: rotate(var(--deg));
-  transition: all 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover{
     transform: rotate(0deg) scale(1.25);
@@ -109,7 +109,7 @@
     width: 100%;
 
     list-style-type: none;
-    font-size: 1.3rem;    
+    font-size: 1.4rem;
 
     li {
       font-family: 'Permanent Marker', Poppins, cursive;

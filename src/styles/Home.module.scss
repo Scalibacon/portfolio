@@ -1,7 +1,7 @@
 @import './responsive.scss';
 
 @mixin main-session {
-  width: clamp(500px, 100%, 1500px);
+  width: clamp(300px, 100%, 1500px);
   padding: 2.5rem;
 }
 
@@ -50,7 +50,7 @@
   
     .roles{
       margin-top: 2.4rem;
-      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      font-size: clamp(1.7rem, 2.5vw, 1.5rem);
       display: flex;
   
       span{
@@ -113,9 +113,9 @@
           gap: 1rem;
   
           blockquote{
-            min-width: 700px;
+            min-width: 300px;
             width: auto;
-            font-size: clamp(1.7rem, 6.5vw, 3rem);            
+            font-size: clamp(1.9rem, 6.5vw, 3rem);            
             text-align: center;
             position: relative;
   
@@ -193,13 +193,16 @@
       align-items: center;
       justify-content: space-evenly;
       flex-wrap: wrap;
-      gap: 0rem;
-
-      // background: crimson;      
+      gap: 0rem;  
     }  
+
     h4{
       opacity: 0.5;
       font-size: 0.9rem;
+
+      @include for-size(smallDesktop){
+        font-size: 1.1rem;
+      }
     }  
   }
 
@@ -235,7 +238,12 @@
       border-radius: 7px;  
       font-family: Roboto, sans-serif; 
       font-size: 1rem; 
-      transition: border 0.15s linear;     
+      transition: border 0.15s linear;  
+      
+      @include for-size(bigPhone){
+        font-size: 1.5rem;
+        padding: 1.2rem 1.4rem;
+      }
     }
 
     input::placeholder, textarea::placeholder{
@@ -267,6 +275,10 @@
       width: clamp(500px, 65%, 1000px);
       margin: 0 auto;
       text-align: center;
+
+      @include for-size(bigPhone){
+        font-size: 1.3rem;
+      }
     }
 
     main{
@@ -279,6 +291,7 @@
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
+        gap: 5rem;
       }
 
       .socials{
@@ -288,7 +301,6 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 1.2rem;
-        // background-color: rgba(255,255,255,0.2);   
         
         a{
           display: flex;
@@ -296,6 +308,11 @@
           gap: 0.4rem;
           transition: filter 0.2s, color 0.2s;
           cursor: pointer;
+
+          @include for-size(bigPhone){
+            font-size: 1.4rem;
+            gap: 0.7rem;
+          }
 
           &:hover{
             filter: brightness(1.1);
@@ -315,6 +332,15 @@
           'button button';
         gap: 1rem;
 
+        @include for-size(bigPhone){
+          grid-template-areas: 
+            'name name'
+            'email email'
+            'phone phone'
+            'text text'
+            'button button';
+        }
+
         button{
           margin: 0 auto;
           grid-area: button;
@@ -329,6 +355,10 @@
           font-family: 'Poppins';
           cursor: pointer;
           transition: 0.1s linear;
+
+          @include for-size(bigPhone){
+            font-size: 1.5rem;
+          }
 
           &:hover{
             filter: brightness(90%);

@@ -5,15 +5,18 @@
   padding: 0;
   box-sizing: border-box;  
 }
+html{
+  font-size: 100%;
+}
 html, body{
-  min-width: fit-content;
+  min-width: fit-content;  
 }
 body {
   width: 100vw;
   background: rgb(var(--background));
   font-family: Poppins, sans-serif;
   color: rgb(var(--color));
-  overflow-x: hidden;
+  overflow-x: hidden;  
 }
 a{
   text-decoration: none;

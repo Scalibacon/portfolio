@@ -47,7 +47,7 @@ const Header = () => {
     <header className={styles.header}>   
       <span ref={hamburger} className={styles.hamburger}>
         <FiMenu        
-          size="2.5rem"
+          size="3.5rem"
         />
       </span>          
 
