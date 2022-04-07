@@ -7,6 +7,7 @@ import { FaQuoteLeft, FaQuoteRight, FaCode, FaSteam, FaLinkedin, FaFacebookSquar
 import { FiBookOpen, FiMonitor, FiPhoneCall } from 'react-icons/fi';
 import { useState } from "react";
 import Resume from "../components/Resume";
+import Footer from "../components/Footer";
 
 
 type comment = {
@@ -277,6 +278,7 @@ const Home = () => {
           </main>
         </section>           
       </main>
+      <Footer/>
     </>
   )    
 }

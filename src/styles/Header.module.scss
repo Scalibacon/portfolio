@@ -82,7 +82,10 @@
   
       a.active{
         color: rgb(var(--contrast-color-lighter));
-        // text-decoration: underline;
+
+        @include for-size(bigPhone){
+          color: inherit;
+        }
       }
     }
   }  
