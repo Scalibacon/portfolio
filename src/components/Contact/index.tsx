@@ -1,5 +1,5 @@
 import { SyntheticEvent, useRef, useState } from 'react';
-import { FaSteam, FaLinkedin, FaFacebookSquare, FaGithub, FaYoutube } from 'react-icons/fa';
+import { FaSteam, FaLinkedin, FaFacebookSquare, FaGithub, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from '../../styles/Contact.module.scss';
@@ -15,30 +15,45 @@ const Contact = () => {
   const phoneInput = useRef<HTMLInputElement>(null);
   const messageInput = useRef<HTMLTextAreaElement>(null);
 
-  const sendMail = async (event: SyntheticEvent) => {  
+  const sendMail = async () => {
+    return new Promise( async (resolve, reject) => {
+      const result = await fetch('https://scali-email-service.herokuapp.com/email', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          from: email,
+          subject: "E-mail enviado do Portfas do Scaliba",
+          content: message,
+          phone: phone
+        })
+      });
+
+      console.log('result ', result);
+
+      if(result.status === 200 || result.status === 202){
+        return resolve(true);
+      } 
+
+      return reject(false);           
+    })
+  }
+
+  const handleSendMail = async (event: SyntheticEvent) => {  
     event.preventDefault();
 
     if(!validateForm()) return;
-
-    const promise = fetch('https://scali-email-service.herokuapp.com/email', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        from: email,
-        subject: "E-mail enviado do Portfas do Scaliba",
-        content: message
-      })
-    });
+    
+    const promise = sendMail();
 
     toast.promise(
       promise,
       {
         pending: 'Tô encaminhando seu e-mail pro chefe...',
         success: 'E-mail enviado com sucesso!',
-        error: 'Vish! Ocorreu algum erro :c'
+        error: 'Vish! Ocorreu algum erro. Verifique se o e-mail está certo e tente novamente.'
       }
     );
   }
@@ -102,9 +117,15 @@ const Contact = () => {
           <figcaption>/scalibacon</figcaption>
         </a>
         
+        
+        <a href="https://api.whatsapp.com/send?phone=5511981116773&amp;text=Salve!%20Bora%20ter%20uma%20troca%C3%A7%C3%A3o%20franca%20de%20ideias?" target="_blank" rel="noreferrer">
+          <FaWhatsapp size="2rem"/>
+          <figcaption>+55 (11)98111-6773</figcaption>
+        </a>        
+        
       </section>
 
-      <form onSubmit={ event => sendMail(event) }>
+      <form onSubmit={ event => handleSendMail(event) }>
         <input type="text" placeholder="Digite seu nome" required className={styles.name} 
           ref={nameInput} value={ name } onChange={ e => setName(e.target.value) } onFocus={ e => e.target.classList.remove(styles.error) }
         />
@@ -117,7 +138,7 @@ const Contact = () => {
         <textarea placeholder="Digite sua mensagem para mim >.<" required className={styles.text} 
           ref={messageInput} value={ message } onChange={ e => setMessage(e.target.value) } onFocus={ e => e.target.classList.remove(styles.error) }
         ></textarea>
-        <input type="submit" onClick={ event => sendMail(event) } value="Enviar e-mail"/>
+        <input type="submit" value="Enviar e-mail"/>
       </form>
 
       <ToastContainer
