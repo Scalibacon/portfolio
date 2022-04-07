@@ -1,0 +1,130 @@
+@import './responsive.scss';
+
+.contactForm{
+  width: clamp(890px, 100%, 1100px);
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+
+  @include for-size(smallDesktop){
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5rem;
+  }
+
+  .socials{
+    min-width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    
+    a{
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: filter 0.2s, color 0.2s;
+      cursor: pointer;
+
+      @include for-size(bigPhone){
+        font-size: 1.4rem;
+        gap: 0.7rem;
+      }
+
+      &:hover{
+        filter: brightness(1.1);
+        color: rgb(var(--contrast-color-lighter))
+      }
+    }
+  }
+
+  input::placeholder, textarea::placeholder{
+    color: rgb(var(--white));
+    opacity: 0.7;
+  }
+
+  input:focus, textarea:focus{
+    border: solid 1px rgb(var(--contrast-color-lighter));
+  }
+
+  input, textarea{
+    outline: none;
+    border: solid 1px rgb(var(--white));
+    border: solid 1px rgb(var(--theme-color-lighter));
+    background-color: transparent;
+    color: rgb(var(--white));
+    padding: 1rem 1.4rem;
+    border-radius: 7px;  
+    font-family: Roboto, sans-serif; 
+    font-size: 1rem; 
+    transition: border 0.15s linear;  
+    
+    @include for-size(bigPhone){
+      font-size: 1.5rem;
+      padding: 1.2rem 1.4rem;
+    }
+  }  
+
+  .name{
+    grid-area: name;
+  }
+  .email{
+    grid-area: email;
+  }
+  .phone{
+    grid-area: phone;
+  }
+  .text{
+    grid-area: text;
+    height: 175px;
+    resize: none;
+  }
+
+  form{
+    min-width: 550px;
+    flex: 1;
+    display: grid;
+    grid-template-areas: 
+      'name name'
+      'email phone'
+      'text text'
+      'button button';
+    gap: 1rem;
+
+    @include for-size(bigPhone){
+      grid-template-areas: 
+        'name name'
+        'email email'
+        'phone phone'
+        'text text'
+        'button button';
+    }
+
+    button{
+      margin: 0 auto;
+      grid-area: button;
+      // width: clamp(250px, 30%, 500px);
+
+      outline: none;
+      padding: 1rem 2rem;
+      background: rgb(var(--theme-color-lighter));
+      color: rgb(var(--white));
+      border: solid 2px rgb(var(--theme-color-lighter));
+      font-size: 1.1rem;
+      font-family: 'Poppins';
+      cursor: pointer;
+      transition: 0.1s linear;
+
+      @include for-size(bigPhone){
+        font-size: 1.5rem;
+      }
+
+      &:hover{
+        filter: brightness(90%);
+        border: solid 2px rgb(var(--contrast-color-lighter));
+      }
+    }
+  }
+}

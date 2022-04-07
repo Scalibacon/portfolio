@@ -1,3 +1,5 @@
+@import './responsive.scss';
+
 .footer{
   width: 100%;
   padding: 2.7rem 1rem 2.7rem 1rem;
@@ -7,4 +9,9 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
+
+  @include for-size(bigPhone){
+    padding: 2.2rem 1rem 2.2rem 1rem;
+    font-size: 1.2rem;
+  }
 }

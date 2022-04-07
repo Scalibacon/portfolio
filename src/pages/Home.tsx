@@ -3,11 +3,12 @@ import Postit from "../components/Postit";
 import Project from "../components/Project";
 import styles from '../styles/Home.module.scss';
 import Nerdola from '../assets/tetheus.svg';
-import { FaQuoteLeft, FaQuoteRight, FaCode, FaSteam, FaLinkedin, FaFacebookSquare, FaGithub, FaYoutube } from 'react-icons/fa';
+import { FaQuoteLeft, FaQuoteRight, FaCode } from 'react-icons/fa';
 import { FiBookOpen, FiMonitor, FiPhoneCall } from 'react-icons/fi';
 import { useState } from "react";
 import Resume from "../components/Resume";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 
 
 type comment = {
@@ -238,44 +239,7 @@ const Home = () => {
 
           <p>Pra falar comigo é só chamar em uma das redes sociais ou preencher o formulário abaixo. </p>
 
-          <main>
-            <section className={styles.socials}>
-              
-              <a href="https://www.linkedin.com/in/matheus-f-nascimento/" target="_blank" rel="noreferrer">
-                <FaLinkedin size="2rem"/>
-                <figcaption>/matheus-f-nascimento</figcaption>
-              </a>
-
-              <a href="https://web.facebook.com/matheus.ferreiradonascimento/" target="_blank" rel="noreferrer">
-                <FaFacebookSquare size="2rem"/>
-                <figcaption>Matheus Ferreira</figcaption>
-              </a>
-
-              <a href="https://github.com/Scalibacon" target="_blank" rel="noreferrer">
-                <FaGithub size="2rem"/>
-                <figcaption>/scalibacon</figcaption>
-              </a>
-
-              <a href="https://www.youtube.com/channel/UCC5yrRtwpkoCRBoAHkvJsgg" target="_blank" rel="noreferrer">
-                <FaYoutube size="2rem"/>
-                <figcaption>Matheus Ferreira</figcaption>
-              </a>              
-
-              <a href="https://steamcommunity.com/id/scalibacon/" target="_blank" rel="noreferrer">
-                <FaSteam size="2rem"/>
-                <figcaption>/scalibacon</figcaption>
-              </a>
-              
-            </section>
-
-            <form>
-              <input type="text" placeholder="Digite seu nome" required className={styles.name}/>
-              <input type="email" placeholder="Digite seu e-mail" required className={styles.email}/>
-              <input type="text" placeholder="Digite seu telefone" required className={styles.phone}/>                
-              <textarea placeholder="Digite sua mensagem para mim >.<" required className={styles.text}></textarea>
-              <button>Enviar e-mail</button>
-            </form>
-          </main>
+          <Contact/>
         </section>           
       </main>
       <Footer/>
