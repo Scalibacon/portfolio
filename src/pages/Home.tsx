@@ -237,9 +237,11 @@ const Home = () => {
             <FiPhoneCall className={styles.icon}/><h2>Contato</h2>
           </header> 
 
-          <p>Pra falar comigo é só chamar em uma das redes sociais ou preencher o formulário abaixo. </p>
+          <p>Pra falar comigo é só chamar em uma das redes sociais ou preencher o formulário abaixo*. </p>
 
           <Contact/>
+
+          <span>* Eu desenvolvi o serviço de envio de e-mail e hospedei num site free por razões de não sou rico, então pode ser que demore alguns leves segundos pra enviar o e-email, caso o serviço esteja em modo de sleep. Mas fica tranquilo que a página vai te avisar. 😋</span>
         </section>           
       </main>
       <Footer/>

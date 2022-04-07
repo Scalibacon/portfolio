@@ -240,5 +240,14 @@
         font-size: 1.3rem;
       }
     }    
+
+    & > span{
+      font-size: 0.85rem;
+      opacity: 0.8;
+
+      @include for-size(bigPhone){
+        font-size: 1.1rem;
+      }
+    }
   }
 }
