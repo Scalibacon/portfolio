@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.9f454c06.css",
-    "main.js": "/portfolio/static/js/main.26be3a01.js",
+    "main.js": "/portfolio/static/js/main.ad8bf2e3.js",
     "static/media/tetheus-bombado-censurado.jpg": "/portfolio/static/media/tetheus-bombado-censurado.07a4e89d6938840d4e21.jpg",
     "static/media/wanted-stamp.png": "/portfolio/static/media/wanted-stamp.9617dcdb933c60839dbf.png",
     "static/media/graffiti3.png": "/portfolio/static/media/graffiti3.7c9d939dcc1b5af36979.png",
@@ -12,10 +12,10 @@
     "static/media/tetheus.svg": "/portfolio/static/media/tetheus.94f627d82ccd1cae42bfc20dd55a30ca.svg",
     "index.html": "/portfolio/index.html",
     "main.9f454c06.css.map": "/portfolio/static/css/main.9f454c06.css.map",
-    "main.26be3a01.js.map": "/portfolio/static/js/main.26be3a01.js.map"
+    "main.ad8bf2e3.js.map": "/portfolio/static/js/main.ad8bf2e3.js.map"
   },
   "entrypoints": [
     "static/css/main.9f454c06.css",
-    "static/js/main.26be3a01.js"
+    "static/js/main.ad8bf2e3.js"
   ]
 }
