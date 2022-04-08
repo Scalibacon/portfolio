@@ -44,7 +44,7 @@
     outline: none;
     border: solid 1px rgb(var(--theme-color-lighter));
     background-color: transparent;
-    color: rgb(var(--white));
+    color: rgb(var(--color));
     padding: 1rem 1.4rem;
     border-radius: 7px;  
     font-family: Roboto, sans-serif; 
@@ -62,7 +62,7 @@
   }  
 
   input::placeholder, textarea::placeholder{
-    color: rgb(var(--white));
+    color: rgb(var(--color));
     opacity: 0.7;
   }
 

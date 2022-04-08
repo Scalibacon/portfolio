@@ -15,7 +15,7 @@
       content: '';
       border-style: solid;
       border-width: 10px 0px 10px 15px;
-      border-color: transparent transparent transparent rgb(var(--white));
+      border-color: transparent transparent transparent rgb(var(--color));
       position: absolute;
       top: 30px;
       right: -14px;
@@ -51,7 +51,7 @@
     
     border-radius: 5px;
     color: rgb(var(--black));
-    background: rgb(var(--white));
+    background: rgb(var(--color));
 
     &::before, &::after{      
       border-style: solid;
@@ -61,7 +61,7 @@
     &::before{
       content: '';
       border-width: 10px 15px 10px 0;
-      border-color: transparent rgb(var(--white)) transparent transparent;      
+      border-color: transparent rgb(var(--color)) transparent transparent;      
       top: 30px;
       left: -14px;
     }

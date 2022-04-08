@@ -12,7 +12,7 @@
   align-items: center;
 
   color: rgb(var(--theme-color-darker));
-  background: white;
+  background: rgb(var(--color));
   overflow: hidden;
 
   @include for-size(smallDesktop){
@@ -117,7 +117,7 @@
 
     font-size: 1rem;
     background: rgb(15,15,15);
-    color: rgb(var(--color));
+    color: rgb(var(--white));
     cursor: pointer;
     transition: filter 0.2s;
 
