@@ -17,28 +17,32 @@ const Contact = () => {
 
   const sendMail = async () => {
     return new Promise(async (resolve, reject) => {
-      //'http://localhost:3333/email'
-      const result = await fetch('https://scali-email-service.herokuapp.com/email', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          from: email,
-          subject: "E-mail enviado do Portfas do Scaliba",
-          content: message,
-          phone: phone
-        })
-      });
-      
-      // const formattedResult = await result.json();
-      if (result.status === 200 || result.status === 202) {
-        return resolve(true);
-      }
+      try {
+        //'http://localhost:3333/email'
+        const result = await fetch('https://scali-email-service.herokuapp.com/email', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: email,
+            subject: "E-mail enviado do Portfas do Scaliba",
+            content: message,
+            phone: phone
+          })
+        });
 
-      return reject(false);
-    })
+        // const formattedResult = await result.json();
+        if (result.status === 200 || result.status === 202) {
+          return resolve(true);
+        }
+
+        return reject(false);
+      } catch (error) {
+        return reject(false);
+      }
+    });
   }
 
   const handleSendMail = async (event: SyntheticEvent) => {
@@ -53,7 +57,7 @@ const Contact = () => {
       {
         pending: 'Tô encaminhando seu e-mail pro chefe...',
         success: 'E-mail enviado com sucesso!',
-        error: 'Vish! Ocorreu algum erro. Verifique se o e-mail está certo e tente novamente.'       
+        error: 'Vish! Ocorreu algum erro. Verifique se o e-mail está certo e tente novamente.'
       }
     );
   }
