@@ -63,7 +63,6 @@ const Contact = () => {
   }
 
   const validateForm = () => {
-
     if (!emailInput.current?.checkValidity()) {
       toast.error("E-mail inválido!");
       emailInput.current?.classList.add(styles.error);
@@ -73,6 +72,12 @@ const Contact = () => {
     if (!nameInput.current?.checkValidity()) {
       toast.error("Digita seu nome aí, pô");
       nameInput.current?.classList.add(styles.error);
+      return false;
+    }
+
+    if (!phoneInput.current?.checkValidity() || phoneInput.current?.value.length < 8) {
+      toast.error("Digite um telefone válido, por favor");
+      phoneInput.current?.classList.add(styles.error);
       return false;
     }
 
@@ -136,7 +141,7 @@ const Contact = () => {
         <input type="email" placeholder="Digite seu e-mail" required className={styles.email}
           ref={emailInput} value={email} onChange={e => setEmail(e.target.value)} onFocus={e => e.target.classList.remove(styles.error)}
         />
-        <input type="text" placeholder="Digite seu telefone (opcional)" className={styles.phone}
+        <input type="text" placeholder="Digite seu telefone" className={styles.phone}
           ref={phoneInput} value={phone} onChange={e => handleSetPhone(e.target.value)} onFocus={e => e.target.classList.remove(styles.error)}
         />
         <textarea placeholder="Digite sua mensagem para mim >.<" required className={styles.text}
