@@ -111,8 +111,8 @@ const Home = () => {
             rotation={5}
               items={[
                 'TypeScript 💜',
-                'PostgreSQL ✔',
-                'TypeORM ✔',
+                'NextJS ✔',
+                'PostgreSQL ✔',                
                 'Express ✔',
                 'Socket.io ✔'
               ]}
@@ -145,7 +145,7 @@ const Home = () => {
             <Postit
               rotation={-3}
               items={[
-                'NextJS ✔',
+                'TypeORM ✔',
                 'JSP ✔',
                 'EJS ✔',
                 'Multer ✔',
@@ -163,7 +163,7 @@ const Home = () => {
                 'CI/CD',
                 'Docker',                  
                 'AWS',
-                'Lambda Functions'              
+                'GraphQL'             
               ]}
             />
 
@@ -171,8 +171,8 @@ const Home = () => {
               title="TO-DO*"
               rotation={7}
               items={[
-                'Elastic Search',                
                 'Apache Kafka',
+                'Elastic Search',
                 'Shell Script',
                 'Redis',
                 'Electron'        

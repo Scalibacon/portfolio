@@ -33,7 +33,7 @@ const Resume = () => {
 
           <fieldset>
             <legend>IDADE</legend>
-            <p>23 anos</p>
+            <p>24 anos</p>
           </fieldset>
 
           <fieldset>
