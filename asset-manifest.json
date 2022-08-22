@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.53c88478.css",
-    "main.js": "/portfolio/static/js/main.b6f01e59.js",
+    "main.css": "/portfolio/static/css/main.026ac0d6.css",
+    "main.js": "/portfolio/static/js/main.8c5e3493.js",
     "static/media/tetheus-bombado-censurado.jpg": "/portfolio/static/media/tetheus-bombado-censurado.07a4e89d6938840d4e21.jpg",
     "static/media/wanted-stamp.png": "/portfolio/static/media/wanted-stamp.9617dcdb933c60839dbf.png",
     "static/media/graffiti3.png": "/portfolio/static/media/graffiti3.7c9d939dcc1b5af36979.png",
@@ -11,11 +11,11 @@
     "static/media/graffiti2.png": "/portfolio/static/media/graffiti2.706c232692d631154a72.png",
     "static/media/tetheus.svg": "/portfolio/static/media/tetheus.94f627d82ccd1cae42bfc20dd55a30ca.svg",
     "index.html": "/portfolio/index.html",
-    "main.53c88478.css.map": "/portfolio/static/css/main.53c88478.css.map",
-    "main.b6f01e59.js.map": "/portfolio/static/js/main.b6f01e59.js.map"
+    "main.026ac0d6.css.map": "/portfolio/static/css/main.026ac0d6.css.map",
+    "main.8c5e3493.js.map": "/portfolio/static/js/main.8c5e3493.js.map"
   },
   "entrypoints": [
-    "static/css/main.53c88478.css",
-    "static/js/main.b6f01e59.js"
+    "static/css/main.026ac0d6.css",
+    "static/js/main.8c5e3493.js"
   ]
 }
