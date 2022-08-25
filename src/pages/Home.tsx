@@ -172,9 +172,9 @@ const Home = () => {
               rotation={7}
               items={[
                 'Apache Kafka',
+                'Redis',                
+                'NGINX',
                 'Elastic Search',
-                'Shell Script',
-                'Redis',
                 'Electron'        
               ]}
               draw={2}
