@@ -161,9 +161,9 @@ const Home = () => {
               items={[
                 'React Native',
                 'CI/CD',
-                'Docker',                  
+                'Docker ✔',                  
                 'AWS',
-                'GraphQL'             
+                'GraphQL ✔'             
               ]}
             />
 
@@ -172,10 +172,10 @@ const Home = () => {
               rotation={7}
               items={[
                 'Apache Kafka',
-                'Redis',                
-                'NGINX',
                 'Elastic Search',
-                'Electron'        
+                'Electron',
+                'Redis',
+                'NGINX'
               ]}
               draw={2}
             />
